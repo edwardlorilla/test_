@@ -1,0 +1,290 @@
+/*!
+ * Start Bootstrap - One Page Wonder HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    margin-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.header-image {
+    display: block;
+    width: 100%;
+    height: 890px;
+    background: url('/assets/img/frontPageCovers/Tabby001_lg.jpg') no-repeat center center scroll;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.headline {
+    padding: 20px 20px;
+}
+
+.headline h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+.headline h2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+.headline p {
+    font-size: 42px;
+    color: #ddd;
+}
+
+.featurette-divider {
+    margin: 80px 0;
+}
+
+.featurette {
+    overflow: hidden;
+}
+
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+
+.featurette-image.pull-right {
+    margin-left: 40px;
+}
+
+.featurette-heading {
+    font-size: 50px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+@media(max-width:1650px) {
+
+    .headline {
+        padding: 15px 15px;
+    }
+
+    .headline h1 {
+        font-size: 45px;
+    }
+
+    .headline h2 {
+        font-size: 20px;
+    }
+
+    .headline p {
+        font-size: 35px;
+    }
+
+}
+
+@media(max-width:1400px) {
+
+    .headline {
+        padding: 15px 15px;
+    }
+
+    .headline h1 {
+        font-size: 35px;
+    }
+
+    .headline h2 {
+        font-size: 20px;
+    }
+
+    .headline p {
+        font-size: 28px;
+    }
+
+}
+@media(max-width:1200px) {
+    .header-image {
+        background: url('/assets/img/frontPageCovers/Tabby001_md.jpg') no-repeat center center scroll;
+        height: 593px;
+    }
+
+    .headline {
+        padding: 15px 15px;
+    }
+
+    .headline h1 {
+        font-size: 35px;
+    }
+
+    .headline h2 {
+        font-size: 20px;
+    }
+
+    .headline p {
+        font-size: 27px;
+    }
+
+    .featurette-divider {
+        margin: 50px 0;
+    }
+
+    .featurette-image.pull-left {
+        margin-right: 20px;
+    }
+
+    .featurette-image.pull-right {
+        margin-left: 20px;
+    }
+
+    .featurette-heading {
+        font-size: 35px;
+    }
+}
+
+@media(max-width:991px) {
+    .header-image {
+        background: url('/assets/img/frontPageCovers/Tabby001_sm.jpg') no-repeat center center scroll;
+        height: 490px;
+    }
+
+    .headline {
+        padding: 10px 10px;
+    }
+
+    .headline h1 {
+        font-size: 35px;
+    }
+
+    .headline h2 {
+        font-size: 50px;
+    }
+
+    .headline p {
+        font-size: 24px;
+    }
+
+    .featurette-divider {
+        margin: 40px 0;
+    }
+
+    .featurette-image {
+        max-width: 50%;
+    }
+
+    .featurette-image.pull-left {
+        margin-right: 10px;
+    }
+
+    .featurette-image.pull-right {
+        margin-left: 10px;
+    }
+
+    .featurette-heading {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:865px) {
+    .headline {
+        padding: 10px 10px;
+    }
+
+    .headline h1 {
+        font-size: 35px;
+    }
+
+    .headline h2 {
+        font-size: 50px;
+    }
+
+    .headline p {
+        font-size: 20px;
+    }
+
+    .featurette-divider {
+        margin: 40px 0;
+    }
+
+    .featurette-image {
+        max-width: 50%;
+    }
+
+    .featurette-image.pull-left {
+        margin-right: 10px;
+    }
+
+    .featurette-image.pull-right {
+        margin-left: 10px;
+    }
+
+    .featurette-heading {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:768px) {
+    .header-image {
+        background: url('/assets/img/frontPageCovers/Tabby001_sm.jpg') no-repeat center center scroll;
+        height: 490px;
+    }
+
+    .container {
+        margin: 0 15px;
+    }
+
+    .featurette-divider {
+        margin: 40px 0;
+    }
+
+    .featurette-heading {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:668px) {
+    .header-image {
+        background: url('/assets/img/frontPageCovers/Tabby001_xs.jpg') no-repeat center center scroll;
+        height: 380px;
+    }
+
+    .headline h1 {
+        font-size: 25px;
+    }
+
+    .headline h2 {
+        font-size: 50px;
+    }
+
+    .headline p {
+        font-size: 18px;
+    }
+
+     .featurette-divider {
+        margin: 30px 0;
+    }
+}
+
+@media(max-width:400px) {
+    .header-image {
+        background: url('/assets/img/frontPageCovers/Tabby001_xs.jpg') no-repeat center center scroll;
+        height: 380px;
+    }
+
+    .featurette-divider {
+        margin: 10px 0;
+    }
+
+    .featurette-image {
+        max-width: 100%;
+    }
+
+    .featurette-image.pull-left {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .featurette-image.pull-right {
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+}

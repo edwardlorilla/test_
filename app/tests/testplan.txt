@@ -1,0 +1,23 @@
+user accounts:
+	* create new user
+	* login with user accounts
+	* change password
+	* forgot password
+	
+	
+
+stories:
+
+
+
+
+
+story teams:
+	* as owner
+		* add user to teams
+		* remove user from teams
+		
+	* as team member
+		* remove self from team
+		* see team members, including owner of team
+		* don't see add session, edit session, delete session, delete story

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Help</title>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ilys-bootstrap-overrides.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ion.sound.min.js"></script>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <help></help>
+    </div>
+
+    <script type="text/x-template" id="accordion-template">
+        <div class="accordion" :class="{ 'accordion-open': isOpen }">
+            <a class="accordion-title" @click="toggleAccordion">
+                <span>{{title}}</span>
+                <template v-if="!alwaysOpen">
+                <i v-if="openState" class="fa fa-chevron-up"></i>
+                <i v-else class="fa fa-chevron-down"></i>
+            </template>
+            </a>
+            <div class="accordion-body">
+                <slot></slot>
+            </div>
+        </div>
+    </script>
+    <script type="text/x-template" id="help-template">
+        <div class="app-container">
+            <div class="help-content">
+                <div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        </div>
+                        <div class="navbar-collapse navbar-ex1-collapse collapse" aria-expanded="false" style="height: 1px;">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/">Dashboard</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav pull-right help-top-menu">
+                                <li v-for="(section, sectionIndex) in helpTrans.sections" :class="{ 'help-top-menu-active': section == currentSection }">
+                                    <a @click="selectTopic(0, sectionIndex)">{{section.title}}</a>
+                                    <ul class="help-top-submenu" v-if="section.topics.length">
+                                        <li v-for="(topic, topicIndex) in section.topics">
+                                            <a @click="selectTopic(topicIndex, sectionIndex)">{{topic.title}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-container help-content-container">
+                    <div class="help-side-bar">
+                        <ul class="help-side-menu">
+                            <li v-for="(topic, topicIndex) in currentSection.topics" :class="{ 'help-side-menu-active': topic == currentTopic }">
+                                <a @click="selectTopic(topicIndex)">{{topic.title}}</a>
+                                <ul class="help-side-submenu" v-if="topic.items.length">
+                                    <li v-for="(item, itemIndex) in topic.items" :class="{ 'help-side-submenu-active': item == currentItem }">
+                                        <a @click="selectItem(itemIndex)">{{item.title}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="help-content-wrapper" v-if="helpContent">
+                        <h4 class="help-session-title">{{helpContent.title}}</h4>
+
+                        <p v-html="helpContent.content"></p>
+
+                        <div v-for="faqGroup in helpContent.faqGroups">
+                            <h5>{{faqGroup.title}}</h5>
+                            <div v-for="(faq, faqIndex) in faqGroup.faqs">
+                                <accordion :title="faq.question" :key="faqId(faqIndex)">
+                                    <p v-html="faq.answer"></p>
+                                </accordion>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

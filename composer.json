@@ -1,0 +1,57 @@
+{
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
+	"type": "project",
+	"repositories": {
+		"packagist": { "url": "https://packagist.org", "type": "composer" }
+	},
+ 	"require": {
+		"laravel/framework": "5.0.*",
+		"doctrine/dbal": "v2.4.2",
+		"frozennode/administrator": "4.*",
+		"zizaco/confide": "4.0",
+		"zizaco/entrust": "1.3.*",
+		"laravel/cashier": "2.0",
+		"guzzlehttp/guzzle": "4.0",
+		"themonkeys/error-emailer": "dev-master",
+		"libern/timezone": "dev-master"
+	},
+	"require-dev": {
+		"fzaninotto/faker": "1.4"
+	},
+	"autoload": {
+		"classmap": [
+			"database",
+			"app/commands",
+			"app/controllers",
+			"app/models",
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php"
+		]
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/TestCase.php"
+		]
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-create-project-cmd": [
+			"php -r \"copy('.env.example', '.env');\"",
+			"php artisan key:generate"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	}
+}

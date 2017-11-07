@@ -1,0 +1,197 @@
+html, body {
+  font-size: .95em;
+}
+
+#body {
+  	background-color: 	red;
+}
+
+.youTubeIntroVideo {
+    width: 500px ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+
+#defaultFontSize {
+	font-size: 1.5em;
+}
+
+.well, .panel {
+    margin: 20px;
+}
+
+.story-name {
+  font-size: 1.1em;
+}
+
+.table>thead>tr>td {
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  vertical-align: middle;
+  font-weight: normal;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.table>tbody>tr>td {
+  padding: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  vertical-align: middle;
+  border-top: 0px solid #ffffff;
+}
+
+.table>tbody>tr>td>a {
+  text-decoration: none;
+}
+
+.story-tr:hover {
+    background-color: #f8f8f8;
+    cursor: pointer
+}
+
+.story-reader {
+  white-space: pre-wrap;       /* CSS 3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.ilys-footer {
+	color: #666;
+  padding: 30px;
+}
+
+.ilys-footer a:link, .ilys-footer a:visited {
+    color: #888;
+}
+
+.ilys-footer a:active {
+  color: #e72510;
+}
+
+.ilys-footer a:hover {
+  color: #e72510;
+}
+
+.color-green {
+	color: green;
+}
+
+.color-red {
+	color: red;
+}
+
+#footerBorder {
+    height: 1px;
+    background-color: #e72510;
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.wide {
+  top: 0px;
+  width:100%;
+  height:400px;
+  background-image:url('/assets/img/frontPageCovers/Sudevi001_lg.jpg');
+  background-size:cover;
+}
+
+.wide img {
+  width:100%;
+}
+
+.logo {
+  color:#fff;
+  font-weight:800;
+  font-size:14pt;
+  padding:25px;
+  text-align:center;
+}
+
+.line {
+  padding-top:20px;
+  white-space:no-wrap;
+  overflow:hidden;
+  text-align:center;
+}
+
+
+
+
+
+/* Bootstrap overrides */
+.navbar {
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+#header-image-container {
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.panel-default > .panel-heading {
+	font-weight: bold;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+}
+
+#feedbackFormDisplay {
+  cursor: pointer;
+}
+
+#continue-session-text {
+  margin: 0px;
+}
+
+#nanoprize-banner {
+  background-color: white;
+  font-size: 1.2em;
+  line-height: 1.9em;
+  padding: 20px;
+}
